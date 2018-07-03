@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flexbox Grid</title>
+  <style>
+  .grid {
+    background: white;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+    background: #ddd;
+  }
+
+  .column {
+    flex: 1;
+
+    text-align: center;
+    border: 1px solid #aaa;
+  }
+
+  .aside {
+    flex-basis: 150px;
+  }
+
+  .main-content {
+    flex-basis: 500px;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="grid">
+
+    <div class="row">
+
+      <div class="column">1</div>
+      <div class="column">2</div>
+      <div class="column">3</div>
+      <div class="column">4</div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="column">1</div>
+      <div class="column">2</div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="column">1</div>
+      <div class="column">2</div>
+      <div class="column">3</div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="column">1</div>
+      <div class="column">2</div>
+      <div class="column">3</div>
+      <div class="column">1</div>
+      <div class="column">2</div>
+      <div class="column">3</div>
+
+    </div>
+
+    <!-- How about nested -->
+    <div class="row">
+
+      <div class="column">1</div>
+      <div class="column">
+        <div class="row">
+
+          <div class="column">1</div>
+          <div class="column">2</div>
+
+        </div>
+        <div class="row">
+
+          <div class="column">1</div>
+          <div class="column">2</div>
+          <div class="column">3</div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Layout -->
+    <div class="row">
+      <div class="column aside">Sidebar</div>
+      <div class="column main-content">Main Content</div>
+    </div>
+
+  </div>
+</body>
+</html>

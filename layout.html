@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flexbox Layout</title>
+  <style>
+  header h1 { margin: 0; }
+  header {
+    background: #333;
+    color: #efefef;
+  }
+
+  aside {
+    background: #aaa;
+  }
+
+  main {
+    background: #ddd;
+  }
+
+  footer {
+    background: #333;
+    color: #efefef;
+  }
+
+  /* Flexbox */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  header, footer {
+    flex-basis: 100%;
+  }
+
+  aside {
+    display: flex;
+    flex-basis: 175px;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  @media screen and (max-width: 480px) {
+    .container > * {
+      flex-basis: 100%;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+      <header>
+        <h1>My Site</h1>
+      </header>
+
+      <aside>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+          <li><a href="#">Link 5</a></li>
+          <li><a href="#">Link 6</a></li>
+          <li><a href="#">Link 7</a></li>
+          <li><a href="#">Link 8</a></li>
+          <li><a href="#">Link 9</a></li>
+          <li><a href="#">Link 10</a></li>
+        </ul>
+      </aside>
+
+      <main>
+        Main Content
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quisquam aliquam, deleniti neque, nesciunt culpa fugit laboriosam facere nulla, molestiae dignissimos libero hic! Minus provident sit earum quisquam aut aliquam.</p>
+      </main>
+
+      <footer>
+        Footer
+      </footer>
+    </div>
+
+</body>
+</html>
